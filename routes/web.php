@@ -10,3 +10,5 @@ Route::get('/', function () {
 
 //made route for items through controller resource 
 Route :: resource('items',ItemController::class);
+//Did not specified any function in ItemController .default 'index' function will be accesed
+

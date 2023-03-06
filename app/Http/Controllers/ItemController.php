@@ -14,7 +14,9 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+    //in view--> Items folder--> showitem.blade.php file returning
+        return view ('Items.Show');
+        
     }
 
     /**
@@ -24,7 +26,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view ('Items.Create');
     }
 
     /**
@@ -35,7 +37,8 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //can get all inputs to the controller  dd($request->all());    
+       dd($request->all());
     }
 
     /**
