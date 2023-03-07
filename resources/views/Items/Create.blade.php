@@ -14,7 +14,7 @@
 <div class="col-lg-12">
 <div class= " form-group"> 
 <label>Item Name</label>
-<input type="text" class="form-control" id="itemname" name="itemname" placeholder="Enter Item Name">
+<input type="text" class="form-control" id="itemname" name="name" placeholder="Enter Item Name">
 <br>
 </div>
 </div>
@@ -22,7 +22,7 @@
 <div class="col-lg-12">
 <div class= " form-group"> 
 <label>Item Description</label>
-<input type="text" class="form-control" id="itemdescription" name="itemdescription" placeholder="Enter Item Description">
+<input type="text" class="form-control" id="itemdescription" name="description" placeholder="Enter Item Description">
 <br>
 </div>
 </div>
