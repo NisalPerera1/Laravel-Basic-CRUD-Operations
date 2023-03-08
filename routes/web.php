@@ -12,3 +12,6 @@ Route::get('/', function () {
 Route :: resource('items',ItemController::class);
 //Did not specified any function in ItemController .default 'index' function will be accesed
 
+
+//for edit dont need to specify the below code.this is optional
+Route::get('items/{id}/edit', [ItemController::class, 'edit'])->name('items.edit');

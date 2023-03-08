@@ -8,11 +8,11 @@ use Symfony\Contracts\Service\Attribute\Required;
 
 class ItemController extends Controller
 {
-   
     public function index()
     {
+      //item data  fetched from model into data variable
         $data = ItemModel::get();
-      //item variable created and fetched data from model into item variable
+        //sent fetched data into view  using data object keyword
       return view('Items.Index', compact('data'));
       
       
@@ -44,19 +44,25 @@ class ItemController extends Controller
         //
     }
 
-    public function edit(ItemModel $itemModel)
+    public function edit($id)
     {
-        //
+        $item = ItemModel::find($id);
+        return view('Items.Edit', compact('item'));
+
     }
 
     
-    public function update(Request $request, ItemModel $itemModel)
+    public function update(Request $request, ItemModel $item)
     {
-        //
-    }
+        //$request new value and $item is old record
+        $item->update($request->all());
+        return redirect()->route('items.index')->with('success', 'Item edited successfully.');
+    }    
 
-    public function destroy(ItemModel $itemModel)
+    public function destroy(ItemModel $item)
     {
-        //
+        $item->delete();
+        return redirect()->route('items.index')->with('success', 'Item Deleted successfully.');
+
     }
 }
